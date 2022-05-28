@@ -11,12 +11,13 @@ Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 local object_common = {}
 
 local replicated_storage = game:GetService("ReplicatedStorage")
-local common_modules = replicated_storage:WaitForChild("CommonModules")
+--local common_modules = replicated_storage:WaitForChild("CommonModules")
+local common_modules = sandbox:GetCommonModules()
 
-local vector = require(common_modules:WaitForChild("Vector"))
-local cframe = require(common_modules:WaitForChild("CFrame"))
-local collision = require(common_modules:WaitForChild("Collision"))
-local global_reference = require(common_modules:WaitForChild("GlobalReference"))
+local vector = require(common_modules.Vector)
+local cframe = require(common_modules.Vector)
+local collision = require(common_modules.Vector)
+local global_reference = require(common_modules.Vector)
 
 local collision_reference = global_reference:New(workspace, "Level/Map/Collision")
 
