@@ -8,6 +8,11 @@
 
 	--]]
 
+function require(a)
+	return a()
+end
+
+--[[
 return function()
 	local player = game:GetService("Players").LocalPlayer
 	local run_service = game:GetService("RunService")
