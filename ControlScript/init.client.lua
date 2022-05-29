@@ -8,6 +8,7 @@
 
 	--]]
 
+return function()
 	local player = game:GetService("Players").LocalPlayer
 	local run_service = game:GetService("RunService")
 	local replicated_storage = game:GetService("ReplicatedStorage")
@@ -410,3 +411,4 @@
 			debug_labels[i].Text = labels[v]
 		end
 	end)
+end
