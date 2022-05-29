@@ -1,4 +1,4 @@
-	--[[
+--[[
 	= Sonic Onset Adventure Client =
 	Source: ControlScript/Player.lua
 	Purpose: Player class
@@ -34,17 +34,17 @@
 
 	local player_draw = require(pcontrol.PlayerDraw.init)
 
-	local constants = require(script.Parent:WaitForChild("Constants"))
-	local input = require(script:WaitForChild("Input"))
-	local acceleration = require(script:WaitForChild("Acceleration"))
-	local movement = require(script:WaitForChild("Movement"))
-	local collision = require(script:WaitForChild("Collision"))
-	local rail = require(script:WaitForChild("Rail"))
-	local homing_attack = require(script:WaitForChild("HomingAttack"))
-	local lsd = require(script:WaitForChild("LSD"))
-	local ragdoll = require(script:WaitForChild("Ragdoll"))
-	local animation = require(script:WaitForChild("Animation"))
-	local sound = require(script:WaitForChild("Sound"))
+	local constants = require(pcontrol.Constants)
+	local input = require(pcontrol.Player.Input)
+	local acceleration = require(pcontrol.Player.Acceleration)
+	local movement = require(pcontrol.Player.Movement)
+	local collision = require(pcontrol.Player.Collision)
+	local rail = require(pcontrol.Player.Rail)
+	local homing_attack = require(pcontrol.Player.HomingAttack)
+	local lsd = require(pcontrol.Player.LSD)
+	local ragdoll = require(pcontrol.Player.Ragdoll)
+	local animation = require(pcontrol.Player.Animation)
+	local sound = require(pcontrol.Player.Sound)
 
 	local object_reference = global_reference:New(workspace, "Level/Objects")
 
