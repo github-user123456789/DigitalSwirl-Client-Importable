@@ -17,7 +17,7 @@ return function()
 	local assets = GLOBALASSETS
 	local guis = assets:WaitForChild("Guis")
 
-	local constants = pcontrol.Constants
+	local constants = require(pcontrol.Constants)
 
 	--Debug display
 	local debug_gui = Instance.new("ScreenGui")
