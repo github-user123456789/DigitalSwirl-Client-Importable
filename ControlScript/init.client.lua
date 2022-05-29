@@ -8,9 +8,9 @@
 
 	--]]
 
-function require(a)
-	return a()
-end
+--function require(a)
+	--return a()
+--end
 
 --[[
 return function()
