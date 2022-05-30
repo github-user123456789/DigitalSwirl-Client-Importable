@@ -15,11 +15,11 @@
 	local replicated_storage = game:GetService("ReplicatedStorage")
 	local common_modules = commons
 
-	local constants = require(pcontrol.Constants)
-	local collision = require(commons.Collision)
-	local switch = require(commons.Switch)
-	local rail = require(pcontrol.Player.Rail)
-	local global_reference = require(common_modules:WaitForChild("GlobalReference"))
+	local constants = pcontrol.Constants
+	local collision = commons.Collision
+	local switch = commons.Switch
+	local rail = pcontrol.Player.Rail
+	local global_reference = commons.GlobalReference
 
 	local collision_reference = global_reference:New(workspace, "Level/Map/Collision")
 
