@@ -7,7 +7,7 @@
 
 	local draw_magnet_shield = {}
 
-	local assets = script.Parent.Parent:WaitForChild("Assets")
+	local assets = GLOBALASSETS
 	local models = assets:WaitForChild("Models")
 
 	--Constructor and destructor
