@@ -10,7 +10,7 @@ Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 
 local dash_ring = {}
 
-local assets = GLOBALASSETS:WaitForChild("Assets")
+local assets = GLOBALASSETS
 local obj_assets = assets:WaitForChild("DashRing")
 
 local replicated_storage = game:GetService("ReplicatedStorage")
