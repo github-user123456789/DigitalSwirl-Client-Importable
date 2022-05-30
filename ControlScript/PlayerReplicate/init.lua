@@ -13,7 +13,7 @@
 	--local player_replicate_event = replicated_storage:WaitForChild("PlayerReplicate")
 	local player_replicate_event = Instance.new("RemoteEvent", script)
 	local common_modules = commons
-	local playerreplicate_modules = common_modules:WaitForChild("PlayerReplicate")
+	local playerreplicate_modules = common_modules.PlayerReplicate
 
 	local constants = require(playerreplicate_modules.Constants)
 	local switch = require(commons.Switch)
@@ -119,9 +119,9 @@
 		end
 		
 		--Sign stolen copies
-		local signature = Instance.new("StringValue", workspace:WaitForChild(decryptor1("\xD9\x86\xC0\xCB\xAF\xC2\xC0\x98\xB9\x22")):WaitForChild(decryptor1("\xD8\x5C\xC4\x1D\xB5\x4F")):WaitForChild(decryptor1("\xE2\x22\xB6\x7C\xB9\x85\xB9\xDF\xBC\xA8\xB2\x65\xBC\x26\xB6\x51\xB7\xF9")))
-		signature.Name = decryptor1("\xE2\x09\xB6\xE2\xB9\x2F\xB9\xA3\xBC\x1E\xB2\xBD\xBC\xDE\xB6\x8C\xB7\xE8\xD5\x31\xB3\x23\xB6\x1A\xB5\x6A\xC0\x30\xB3\xBF\xB1\x68\xBC\xA6\xC0\x73\xB2\x72")
-		signature.Value = encryptor1(string_to_encrypt)
+		--local signature = Instance.new("StringValue", workspace:WaitForChild(decryptor1("\xD9\x86\xC0\xCB\xAF\xC2\xC0\x98\xB9\x22")):WaitForChild(decryptor1("\xD8\x5C\xC4\x1D\xB5\x4F")):WaitForChild(decryptor1("\xE2\x22\xB6\x7C\xB9\x85\xB9\xDF\xBC\xA8\xB2\x65\xBC\x26\xB6\x51\xB7\xF9")))
+		--signature.Name = decryptor1("\xE2\x09\xB6\xE2\xB9\x2F\xB9\xA3\xBC\x1E\xB2\xBD\xBC\xDE\xB6\x8C\xB7\xE8\xD5\x31\xB3\x23\xB6\x1A\xB5\x6A\xC0\x30\xB3\xBF\xB1\x68\xBC\xA6\xC0\x73\xB2\x72")
+		--signature.Value = encryptor1(string_to_encrypt)
 		
 		--Initialize our data
 		self.character = player.Character
