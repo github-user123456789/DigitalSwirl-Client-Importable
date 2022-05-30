@@ -19,7 +19,7 @@ local obj_assets = assets:WaitForChild("ItemBox")
 local function Draw(self, dt)
 	--Destroy particle once lifetime is over
 	if self.touch_particle ~= nil then
-		self.touch_particle_life -= dt
+		self.touch_particle_life = self.touch_particle_life - dt
 		if self.touch_particle_life <= 0 then
 			self.touch_particle:Destroy()
 			self.touch_particle = nil
