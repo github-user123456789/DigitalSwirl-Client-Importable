@@ -7,7 +7,7 @@
 
 	local player = {}
 
-	local assets = script.Parent:WaitForChild("Assets")
+	local assets = GLOBALASSETS
 	local global_sounds = assets:WaitForChild("Sounds")
 	local obj_assets = assets:WaitForChild("Objects")
 
