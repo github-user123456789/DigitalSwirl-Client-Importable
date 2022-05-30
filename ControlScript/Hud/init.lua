@@ -6,7 +6,9 @@
 	--]]
 
 	local hud_class = {}
-
+	
+	-- alot of debug prints sorry
+	print(GLOBALASSETS)
 	local assets = GLOBALASSETS
 	print(assets)
 	local guis = assets.Guis
