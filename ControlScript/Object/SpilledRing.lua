@@ -66,8 +66,8 @@ local function Update(self, i)
 	
 	if sub_tick == 0 then
 		--Drag and fall
-		self.spd *= drag ^ tick_rate
-		self.spd -= gravity * tick_rate
+		self.spd = self.spd * drag ^ tick_rate
+		self.spd = self.spd - gravity * tick_rate
 		
 		--Get next position and sub speed
 		local next_pos = GetNextPos(self, self.spd * tick_rate)
@@ -77,8 +77,8 @@ local function Update(self, i)
 		local sim_ticks = tick_rate - sub_tick
 		
 		--Drag and fall
-		self.spd *= drag ^ sim_ticks
-		self.spd -= gravity * sim_ticks
+		self.spd = self.spd * drag ^ sim_ticks
+		self.spd = self.spd - gravity * sim_ticks
 		
 		--Get next position and sub speed
 		local next_pos = GetNextPos(self, self.spd * sim_ticks)
@@ -109,7 +109,7 @@ local function Draw(self, dt)
 		
 		--Destroy particle once lifetime is over
 		if self.touch_particle ~= nil then
-			self.touch_particle_life -= dt
+			self.touch_particle_life = self.touch_particle_life - dt
 			if self.touch_particle_life <= 0 then
 				self.touch_particle:Destroy()
 				self.touch_particle = nil
