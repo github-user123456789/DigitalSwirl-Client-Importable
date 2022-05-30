@@ -11,7 +11,7 @@ Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 local spilled_ring = {}
 
 local replicated_storage = game:GetService("ReplicatedStorage")
-local common_modules = replicated_storage:WaitForChild("CommonModules")
+local common_modules = commons
 
 local vector = require(common_modules:WaitForChild("Vector"))
 local collision = require(common_modules:WaitForChild("Collision"))
@@ -19,7 +19,7 @@ local global_reference = require(common_modules:WaitForChild("GlobalReference"))
 
 local collision_reference = global_reference:New(workspace, "Level/Map/Collision")
 
-local assets = script.Parent.Parent:WaitForChild("Assets")
+local assets = GLOBALASSETS
 local obj_assets = assets:WaitForChild("Ring")
 
 --Constants
