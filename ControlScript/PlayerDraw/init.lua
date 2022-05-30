@@ -8,7 +8,7 @@
 	local player_draw = {}
 
 	local replicated_storage = game:GetService("ReplicatedStorage")
-	local common_modules = replicated_storage:WaitForChild("CommonModules")
+	local common_modules = commons
 
 	local switch = require(common_modules:WaitForChild("Switch"))
 	local camera_util = require(common_modules:WaitForChild("CameraUtil"))
