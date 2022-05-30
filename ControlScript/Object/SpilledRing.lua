@@ -89,7 +89,7 @@ local function Update(self, i)
 	self.object:SetPrimaryPartCFrame(self.root.CFrame + self.sub_spd)
 	
 	--Destroy object after timer runs out
-	self.time += 1
+	self.time = self.time + 1
 	if self.time >= destroy_time then
 		local object = self.object
 		self.object = nil
