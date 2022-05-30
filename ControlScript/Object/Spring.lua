@@ -90,7 +90,7 @@ function spring:New(object)
 	
 	if self.power < 0 then
 		--Scripted
-		self.power *= -1
+		self.power = self.power * -1
 		self.scripted = true
 	else
 		--Not scripted
