@@ -15,9 +15,9 @@
 	local common_modules = commons
 	local playerreplicate_modules = common_modules:WaitForChild("PlayerReplicate")
 
-	local constants = require(playerreplicate_modules:WaitForChild("Constants"))
+	local constants = require(playerreplicate_modules.Constants)
 	local switch = require(commons.Switch)
-	local peer_class = require(pcontrol.Replicate.Peer)
+	local peer_class = require(pcontrol.PlayerReplicate.Peer)
 
 	--Player replicate event
 	local function ConnectPeer(self, peer)
