@@ -146,9 +146,9 @@
 			
 			--Facial
 			local facial_parts = {
-				["Mouth"] = self.mouth,
-				["LEye"] = self.left_eye,
-				["REye"] = self.right_eye,
+				--["Mouth"] = self.mouth,
+				--["LEye"] = self.left_eye,
+				--["REye"] = self.right_eye,
 			}
 			
 			for i, v in pairs(facial_parts) do
@@ -164,9 +164,9 @@
 	--Animation interface
 	function player_animation.LoadAnimations(self)
 		--Get facial parts
-		self.mouth = self.character:WaitForChild("Mouth_Geo")
-		self.left_eye = self.character:WaitForChild("LeftIris_Geo")
-		self.right_eye = self.character:WaitForChild("RightIris_Geo")
+		--self.mouth = self.character:WaitForChild("Mouth_Geo")
+		--self.left_eye = self.character:WaitForChild("LeftIris_Geo")
+		--self.right_eye = self.character:WaitForChild("RightIris_Geo")
 		
 		--Load animation tracks from animations folder
 		self.animation_tracks = {}
