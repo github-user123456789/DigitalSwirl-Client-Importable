@@ -272,11 +272,12 @@
 		"center_height",
 	}
 
-	local physics = script:WaitForChild("Physics")
+	local physics = pcontrol.Player.Physics
 
 	function player:SetPhysics(game, char)
-		local game_mod = physics:FindFirstChild(game)
-		if game_mod ~= nil and game_mod:IsA("ModuleScript") then
+		--local game_mod = physics:FindFirstChild(game)
+		local gamemode = physics[game]
+		if game_mod ~= nil and (game_mod:IsA("ModuleScript") or true) then
 			local game_pack = require(game_mod)
 			local char_phys = game_pack[char]
 			
