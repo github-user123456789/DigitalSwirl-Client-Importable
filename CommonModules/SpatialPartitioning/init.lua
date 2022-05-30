@@ -9,7 +9,7 @@
 
 	local run_service = game:GetService("RunService")
 
-	local part_class = commons.SpatialPartitioning.Part()
+	local part_class = commons.SpatialPartitioning.Part
 
 	--Internal functions
 	local function RemoveCell(self, vec, part)
