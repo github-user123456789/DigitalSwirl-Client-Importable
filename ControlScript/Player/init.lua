@@ -35,7 +35,7 @@
 	local player_draw = require(pcontrol.PlayerDraw.init)
 
 	local constants = require(pcontrol.Constants)
-	local input = require(pcontrol.Player.Input)
+	local input = require(pcontrol.Player.Input.init)
 	local acceleration = require(pcontrol.Player.Acceleration)
 	local movement = require(pcontrol.Player.Movement)
 	local collision = require(pcontrol.Player.Collision)
