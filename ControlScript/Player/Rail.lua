@@ -126,7 +126,7 @@
 					local up = v.CFrame.UpVector
 					local top = v.Position + up * (v.Size.Y / 2)
 					if (center - top):Dot(up) < 0 and not self.v3 then
-						continue
+						--continue
 					end
 				end
 				hit = v
