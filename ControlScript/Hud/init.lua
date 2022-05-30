@@ -8,11 +8,16 @@
 	local hud_class = {}
 
 	local assets = GLOBALASSETS
+	print(assets)
 	local guis = assets.Guis
+	print(guis)
 
 	local text = require(pcontrol.Hud.Text)
+	print(text)
 	local ring_flash = require(pcontrol.Hud.RingFlash)
+	print(ring_flash)
 	local item_card = require(pcontrol.Hud.ItemCard)
+	print(item_card)
 
 	--Constructor and destructor
 	function hud_class:New(parent_gui)
