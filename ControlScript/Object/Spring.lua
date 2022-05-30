@@ -10,17 +10,17 @@ Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 
 local spring = {}
 
-local assets = script.Parent.Parent:WaitForChild("Assets")
+local assets = GLOBALASSETS
 local obj_assets = assets:WaitForChild("Spring")
 
 local replicated_storage = game:GetService("ReplicatedStorage")
-local common_modules = replicated_storage:WaitForChild("CommonModules")
+local common_modules = commons
 
 local cframe = require(common_modules:WaitForChild("CFrame"))
 local vector = require(common_modules:WaitForChild("Vector"))
-local constants = require(script.Parent.Parent:WaitForChild("Constants"))
+local constants = require(pcontrol.Constants)
 
-local object_common = require(script.Parent.Parent:WaitForChild("ObjectCommon"))
+local object_common = require(pcontrol.ObjectCommon)
 
 --Object functions
 local function Update(self, i)
