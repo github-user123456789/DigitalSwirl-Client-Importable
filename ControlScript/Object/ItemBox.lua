@@ -10,9 +10,9 @@ Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 
 local item_box = {}
 
-local object_common = require(script.Parent.Parent:WaitForChild("ObjectCommon"))
+local object_common = require(pcontrol.ObjectCommon)
 
-local assets = script.Parent.Parent:WaitForChild("Assets")
+local assets = GLLOBALASSETS
 local obj_assets = assets:WaitForChild("ItemBox")
 
 --Object functions
