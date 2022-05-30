@@ -27,7 +27,7 @@ local function TouchPlayer(self, player)
 		--Check if should interact
 		if player.flag.grounded ~= true and player:BallActive() then
 			--Bounce player
-			player.pos += self.root.Position - player:GetMiddle()
+			player.pos = player.pos + self.root.Position - player:GetMiddle()
 			player:ObjectBounce()
 			
 			--Set debounce
