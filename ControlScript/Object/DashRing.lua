@@ -10,15 +10,15 @@ Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 
 local dash_ring = {}
 
-local assets = script.Parent.Parent:WaitForChild("Assets")
+local assets = GLOBALASSETS:WaitForChild("Assets")
 local obj_assets = assets:WaitForChild("DashRing")
 
 local replicated_storage = game:GetService("ReplicatedStorage")
-local common_modules = replicated_storage:WaitForChild("CommonModules")
+local common_modules = commons
 
 local cframe = require(common_modules:WaitForChild("CFrame"))
 local vector = require(common_modules:WaitForChild("Vector"))
-local constants = require(script.Parent.Parent:WaitForChild("Constants"))
+local constants = require(pcontrol.Constants)
 
 --Object functions
 local function Update(self, i)
