@@ -10,7 +10,7 @@ Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 
 local player_sound = {}
 
-local sounds = script.Parent:WaitForChild("Sounds")
+local sounds = pcontrol.Sounds
 
 --Sound interface
 function player_sound.LoadSounds(self)
