@@ -208,9 +208,10 @@
 		end
 		
 		--Get dynamic tilt joints
-		self.tilt_neck = self.hrp:WaitForChild("Root"):WaitForChild("LowerTorso"):WaitForChild("UpperTorso"):WaitForChild("Neck")
+		--self.tilt_neck = self.hrp:WaitForChild("Root"):WaitForChild("LowerTorso"):WaitForChild("UpperTorso"):WaitForChild("Neck")
+		self.tilt_neck = self.hrp.Parent:WaitForChild("Head"):WaitForChild("Head")
 		self.tilt_neck_cf = self.tilt_neck.CFrame
-		self.tilt_torso = self.hrp:WaitForChild("Root"):WaitForChild("LowerTorso")
+		self.tilt_torso = self.hrp.Parent:WaitForChild("LowerTorso")
 		self.tilt_torso_cf = self.tilt_torso.CFrame
 	end
 
