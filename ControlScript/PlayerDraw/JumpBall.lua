@@ -10,7 +10,7 @@
 	--Constructor and destructor
 	function draw_jump_ball:New(holder, models)
 		--Initialize meta reference
-		models = GLOBALASSETS.models
+		models = GLOBALASSETS.Models
 		local self = setmetatable({}, {__index = draw_jump_ball})
 		
 		--Create model instance
