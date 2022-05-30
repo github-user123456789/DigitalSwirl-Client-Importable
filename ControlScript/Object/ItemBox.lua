@@ -12,7 +12,7 @@ local item_box = {}
 
 local object_common = require(pcontrol.ObjectCommon)
 
-local assets = GLLOBALASSETS
+local assets = GLOBALASSETS
 local obj_assets = assets:WaitForChild("ItemBox")
 
 --Object functions
