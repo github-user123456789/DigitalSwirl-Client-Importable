@@ -14,7 +14,7 @@
 
 	local input = require(pcontrol.Player.Input.init)
 	local sound = require(pcontrol.Player.Sound)
-	local movement = require(script.Parent:WaitForChild("Movement"))
+	local movement = require(pcontrol.Player.Movement)
 
 	--Ground movement interface
 	function player_acceleration.GetAcceleration(self)
