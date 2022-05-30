@@ -183,6 +183,7 @@
 		self.rail_sparks = bottom:WaitForChild("Sparks")
 		
 		--Get level music id and volume
+		--[[
 		local music_id = workspace:WaitForChild("Level"):WaitForChild("MusicId")
 		local music_volume = workspace:WaitForChild("Level"):WaitForChild("MusicVolume")
 		
@@ -195,6 +196,10 @@
 		self.level_music_volume_conn = music_volume:GetPropertyChangedSignal("Value"):Connect(function()
 			self.level_music_volume = music_volume.Value
 		end)
+		]]
+		
+		self.level_music_id = 1
+		self.level_music_volume = .5
 		
 		--Music state
 		self.music_id = self.level_music_id
