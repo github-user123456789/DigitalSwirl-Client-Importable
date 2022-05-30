@@ -10,7 +10,7 @@
 
 	local player_animation = {}
 
-	local footstep_sounds = script.Parent:WaitForChild("FootstepSounds")
+	local footstep_sounds = pcontrol.Player.FootstepSounds
 
 	local replicated_storage = game:GetService("ReplicatedStorage")
 	local common_modules = commons
