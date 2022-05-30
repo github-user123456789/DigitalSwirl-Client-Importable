@@ -64,7 +64,7 @@
 		--Initialize spatial partitioning
 		self.rail_cons = {}
 		self.rail_spatial_partitioning = spatial_partitioning:New(16)
-		ConnectFolder(self, workspace:WaitForChild("Level"):WaitForChild("Rails"))
+		--ConnectFolder(self, workspace:WaitForChild("Level"):WaitForChild("Rails"))
 	end
 
 	function player_rail.Quit(self)
