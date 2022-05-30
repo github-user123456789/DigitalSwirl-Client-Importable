@@ -10,13 +10,13 @@
 	local replicated_storage = game:GetService("ReplicatedStorage")
 	local common_modules = commons
 
-	local input = require(pcontrol.Player.Input.init)
-	local constants = require(pcontrol.Constants)
-	local vector = require(commons.Vector)
-	local collision = require(commons.Collision)
-	local spatial_partitioning = require(commons.SpatialPartitioning.init)
-	local sound = require(pcontrol.Sound)
-	local global_reference = require(commons.GlobalReference)
+	local input = pcontrol.Player.Input.init
+	local constants = pcontrol.Constants
+	local vector = commons.Vector
+	local collision = commons.Collision
+	local spatial_partitioning = commons.SpatialPartitioning.init
+	local sound = pcontrol.Sound
+	local global_reference = commons.GlobalReference
 
 	local rails_reference = global_reference:New(workspace, "Level/Rails")
 
