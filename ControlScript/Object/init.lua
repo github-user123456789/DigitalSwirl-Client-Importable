@@ -131,7 +131,7 @@
 		end
 		
 		--Initial object connection
-		ConnectFolder(self, workspace:WaitForChild("Level"):WaitForChild("Objects"))
+		--ConnectFolder(self, workspace:WaitForChild("Level"):WaitForChild("Objects"))
 		
 		--Initialize state
 		self.update_osc_time = 0
