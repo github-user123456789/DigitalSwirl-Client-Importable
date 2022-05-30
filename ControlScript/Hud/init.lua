@@ -5,6 +5,9 @@
 	Author(s): Regan "CuckyDev/TheGreenDeveloper" Green
 	--]]
 
+print("test123")
+
+--[[
 	local hud_class = {}
 	
 	-- alot of debug prints sorry
@@ -246,3 +249,4 @@
 	end
 
 	return hud_class
+]]
