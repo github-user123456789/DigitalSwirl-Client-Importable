@@ -11,10 +11,10 @@
 	local obj_assets = assets:WaitForChild("DashRamp")
 
 	local replicated_storage = game:GetService("ReplicatedStorage")
-	local common_modules = replicated_storage:WaitForChild("CommonModules")
+	local common_modules = commons
 
 	local vector = require(common_modules:WaitForChild("Vector"))
-	local constants = require(script.Parent.Parent:WaitForChild("Constants"))
+	local constants = require(pcontrol.Constants)
 
 	--Object functions
 	local function Update(self, i)
