@@ -325,6 +325,7 @@
 			end
 			
 			--Handle animation speed
+			--[[
 			if self.animations[self.animation].spd_b and self.animations[self.animation].spd_i then
 				--Get speed to set
 				local spd = self.animations[self.animation].spd_b + math.abs(self.anim_speed) * self.animations[self.animation].spd_i
@@ -336,7 +337,8 @@
 				for _,v in pairs(self.animations[self.animation].tracks) do
 					self.animation_tracks[v.name]:AdjustSpeed(spd)
 				end
-			end; print("handled anim speed")
+			end; ]]
+			print("handled anim speed")
 			
 			--Handle animation weights
 			if #self.animations[self.animation].tracks > 1 then
