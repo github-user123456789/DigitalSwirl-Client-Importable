@@ -266,9 +266,13 @@
 			if self.animation == self.prev_animation then
 				--Handle animation end changes
 				if self.animations[self.animation].end_anim ~= nil then
+					print("end anim is not nil")
 					local track = player_animation.GetAnimationTrack(self)
+					print("tried to get track")
 					if track ~= nil and (track.IsPlaying == false or track.TimePosition >= track.Length) then
+						print("track is not nil")
 						self.animation = self.animations[self.animation].end_anim
+						print("set animation")
 					end
 				end; print("handled animation end changes")
 				
