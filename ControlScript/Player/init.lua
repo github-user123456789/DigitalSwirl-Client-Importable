@@ -1485,7 +1485,9 @@
 		--Update animation and dynamic tilt
 		print("doing anims")
 		animation.Animate(self)
+		print("did .Animate")
 		animation.DynTilt(self, dt)
+		print("did .DynTilt")
 		print("finished anims")
 		
 		--Get character position
