@@ -220,6 +220,7 @@
 		
 		--Update portrait
 		print("portrait")
+		--[[
 		if player.portrait ~= self.portrait then
 			--Update portrait display
 			local portrait = player.portraits[player.portrait]
@@ -233,6 +234,7 @@
 				self.hurt_shake = 0.25
 			end
 		end
+		]]
 		
 		--Shake HUD
 		print("shake hud")
