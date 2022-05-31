@@ -19,6 +19,10 @@
 	--Ground movement interface
 	function player_acceleration.GetAcceleration(self)
 		--Get physics values
+		local function print(...)
+			return ...
+		end
+		
 		local weight = self:GetWeight()
 		local max_x_spd = self:GetMaxXSpeed()
 		local run_accel = self:GetRunAccel() * (self.v3 and 1.5 or 1)
