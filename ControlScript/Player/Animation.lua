@@ -263,7 +263,7 @@
 		
 		if self.animation ~= nil then
 			print("got past self.animation")
-			if self.animation == self.prev_animation then
+			if self.animation == (self.prev_animation or nil) then
 				--Handle animation end changes
 				--[[
 				if self.animations[self.animation].end_anim ~= nil then
@@ -276,6 +276,7 @@
 						print("set animation")
 					end
 				end; print("handled animation end changes")
+				]]
 				
 				--Handle animation specific changes
 				switch(self.animation, {}, {
@@ -299,7 +300,7 @@
 							self.animation = "Fall"
 						end
 					end,
-				});]]
+				});
 				print("handled anim specific changes")
 			end
 			
@@ -313,16 +314,16 @@
 				--Stop previous animation
 				if self.prev_animation ~= nil then
 					for _,v in pairs(self.animations[self.prev_animation].tracks) do
-						self.animation_tracks[v.name]:Stop()
+						self.animation_tracks[v.name]:Stop();
 					end
 				end; print("stopped old animation")
 				
 				--Play new animation
 				self.prev_animation = self.animation
 				for _,v in pairs(self.animations[self.animation].tracks) do
-					self.animation_tracks[v.name]:Play()
+					self.animation_tracks[v.name]:Play();
 				end; print("played new animation")
-			end
+			end; print("did anim changes")
 			
 			--Handle animation speed
 			--[[
