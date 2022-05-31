@@ -87,6 +87,7 @@
 
 	--Constructor and destructor
 	function global_reference:New(parent, directory)
+		parent = workspace
 		--Check for same reference
 		local self, alreg = Register(parent, directory)
 		if alreg then
