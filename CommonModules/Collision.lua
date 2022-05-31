@@ -13,8 +13,10 @@
 	--Raycasting collision
 	function collision_module.Raycast(wl, from, dir)
 		local param = RaycastParams.new()
-		param.FilterType = Enum.RaycastFilterType.Whitelist
-		param.FilterDescendantsInstances = wl
+		--param.FilterType = Enum.RaycastFilterType.Whitelist
+		--param.FilterDescendantsInstances = wl
+		param.FilterType = Enum.RaycastFilterType.Blacklist
+		param.FilterDescendantsInstances = {game:service("Players").LocalPlayer:FindFirstChild("Character") or nil}
 		param.IgnoreWater = true
 		local result = workspace:Raycast(from, dir, param)
 		if result then
