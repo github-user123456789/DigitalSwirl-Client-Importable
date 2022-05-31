@@ -100,6 +100,7 @@
 	function hud_class:UpdateDisplay(dt, player)
 		debug.profilebegin("hud_class:UpdateDisplay")
 		
+		--[==[
 		local function print(...)
 			return ...
 		end
@@ -252,6 +253,7 @@
 		end
 		
 		debug.profileend()
+		]==]
 	end
 
 	return hud_class
