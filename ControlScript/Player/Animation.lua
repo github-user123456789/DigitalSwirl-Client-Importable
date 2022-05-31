@@ -262,6 +262,7 @@
 	function player_animation.Animate(self)
 		
 		if self.animation ~= nil then
+			print("got past self.animation")
 			if self.animation == self.prev_animation then
 				--Handle animation end changes
 				if self.animations[self.animation].end_anim ~= nil then
@@ -269,7 +270,7 @@
 					if track ~= nil and (track.IsPlaying == false or track.TimePosition >= track.Length) then
 						self.animation = self.animations[self.animation].end_anim
 					end
-				end
+				end; print("handled animation end changes")
 				
 				--Handle animation specific changes
 				switch(self.animation, {}, {
@@ -293,7 +294,7 @@
 							self.animation = "Fall"
 						end
 					end,
-				})
+				}); print("handled anim specific changes")
 			end
 			
 			--Animation changes
@@ -308,13 +309,13 @@
 					for _,v in pairs(self.animations[self.prev_animation].tracks) do
 						self.animation_tracks[v.name]:Stop()
 					end
-				end
+				end; print("stopped old animation")
 				
 				--Play new animation
 				self.prev_animation = self.animation
 				for _,v in pairs(self.animations[self.animation].tracks) do
 					self.animation_tracks[v.name]:Play()
-				end
+				end; print("played new animation")
 			end
 			
 			--Handle animation speed
@@ -329,7 +330,7 @@
 				for _,v in pairs(self.animations[self.animation].tracks) do
 					self.animation_tracks[v.name]:AdjustSpeed(spd)
 				end
-			end
+			end; print("handled anim speed")
 			
 			--Handle animation weights
 			if #self.animations[self.animation].tracks > 1 then
@@ -352,7 +353,7 @@
 						self.animation_tracks[v.name]:AdjustWeight(0.01)
 					end
 				end
-			end
+			end; print("handled weights")
 		end
 		
 		--Reset animation state
@@ -452,7 +453,7 @@
 			elseif self.animation == "Rail" or self.animation == "RailCrouch" then
 				self.animation_tracks[self.animation]:AdjustSpeed(0.125 + math.abs(self.anim_speed) / 2)
 			end
-		end
+		end; print("handled run anim")
 		
 		--Clear animation reset flag now that it's been processed
 		self.reset_anim = false
