@@ -109,7 +109,7 @@
 		else
 			--Drag and do regular movement
 			self.spd = vector.MulX(self.spd, 0.98)
-			print("set spd")
+			--print("set spd")
 			acceleration.GetAcceleration(self)
 			print("got accelerate")
 			
