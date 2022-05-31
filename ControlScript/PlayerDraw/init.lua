@@ -137,6 +137,7 @@
 			end
 			
 			--Blink character
+			--[[
 			local force_ball = nil
 			if blinking then
 				self.vis =  (self.ball ~= nil) and 1 or (1 - self.vis)
@@ -147,6 +148,7 @@
 				ApplyVisible(self, self.vis)
 				force_ball = self.ball ~= nil
 			end
+			]]
 			
 			--Update ball
 			if ball ~= self.ball or force_ball ~= nil then
@@ -293,7 +295,8 @@
 			self.invincible = invincible
 			self.trail_active = trail_active
 			self.shield = shield
-			self.blinking = blinking
+			--self.blinking = blinking
+			self.blinking = false
 		end
 		
 		debug.profileend()
