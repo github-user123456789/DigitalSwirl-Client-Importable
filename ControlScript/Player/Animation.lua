@@ -260,6 +260,7 @@
 	end
 
 	function player_animation.Animate(self)
+		return nil end
 		if self.animation ~= nil then
 			if self.animation == self.prev_animation then
 				--Handle animation end changes
