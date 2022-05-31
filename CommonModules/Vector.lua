@@ -1,3 +1,4 @@
+print("loading vector")
 --[[
 
 	= DigitalSwirl =
