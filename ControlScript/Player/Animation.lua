@@ -265,6 +265,7 @@
 			print("got past self.animation")
 			if self.animation == self.prev_animation then
 				--Handle animation end changes
+				--[[
 				if self.animations[self.animation].end_anim ~= nil then
 					print("end anim is not nil")
 					local track = player_animation.GetAnimationTrack(self)
@@ -275,6 +276,7 @@
 						print("set animation")
 					end
 				end; print("handled animation end changes")
+				]]
 				
 				--Handle animation specific changes
 				switch(self.animation, {}, {
