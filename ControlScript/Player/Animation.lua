@@ -261,6 +261,16 @@
 
 	function player_animation.Animate(self)
 		
+		if not self.animation["fakeanimationtag"] then
+			local animfake = {}
+			for i,v in pairs (GLOBALASSETS:children()) do
+				animfake[v.Name] = {tracks = {{name = v.Name, pos = 0, end_anim = v.Name, WeightCurrent = 1}, end_anim = v.Name}}
+			end
+			animfake.fakeanimationtag = true
+			self.animation = animfake
+			self.animation_tracks = GLOBALASSETS.Animations:children()
+		end
+		
 		if self.animation ~= nil then
 			print("got past self.animation")
 			if self.animation == (self.prev_animation or nil) then
