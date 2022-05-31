@@ -110,13 +110,10 @@
 			--Drag and do regular movement
 			self.spd = vector.MulX(self.spd, 0.98)
 			--print("set spd")
-			print(acceleration)
 			acceleration.GetAcceleration(self)
-			print("got accelerate")
 			
 			--Increment homing timer
 			self.homing_timer = self.homing_timer + 1
-			print("homing timer incremented")
 			return self.homing_timer >= 15
 		end
 	end
