@@ -341,6 +341,7 @@
 			print("handled anim speed")
 			
 			--Handle animation weights
+			--[[
 			if #self.animations[self.animation].tracks > 1 then
 				--Get track to play
 				local playing_track = self.animations[self.prev_animation].tracks[1].name
@@ -361,7 +362,8 @@
 						self.animation_tracks[v.name]:AdjustWeight(0.01)
 					end
 				end
-			end; print("handled weights")
+			end; ]]
+			print("handled weights")
 		end
 		
 		--Reset animation state
