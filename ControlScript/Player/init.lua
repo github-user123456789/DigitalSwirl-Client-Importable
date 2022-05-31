@@ -1482,11 +1482,15 @@
 	function player:Draw(dt)
 		debug.profilebegin("player:Draw")
 		
+		local function print(...)
+			return ...	
+		end
+		
 		--Update animation and dynamic tilt
 		print("doing anims")
 		animation.Animate(self)
 		print("did .Animate")
-		animation.DynTilt(self, dt)
+		--animation.DynTilt(self, dt)
 		print("did .DynTilt")
 		print("finished anims")
 		
