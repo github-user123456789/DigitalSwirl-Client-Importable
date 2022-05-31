@@ -1537,6 +1537,7 @@
 		print("did rail grind")
 		
 		--Air kick trails
+		print("will try to do air kick")
 		if self.animation == "AirKick" then
 			for _,v in pairs(self.air_kick_trails) do
 				v.Enabled = true
@@ -1546,15 +1547,19 @@
 				v.Enabled = false
 			end
 		end
+		print("did air kick")
 		
 		--Skid trail
+		print("attempt to skid")
 		if self.animation == "Skid" then
 			self.skid_effect.Enabled = true
 		else
 			self.skid_effect.Enabled = false
 		end
+		print("did skid")
 		
 		--Rail sparks
+		print("rail sparks")
 		if rail.GrindActive(self) and math.abs(self.spd.X) >= self.p.run_speed then
 			self.rail_sparks.Enabled = true
 			self.rail_sparks.Rate = math.abs(self.spd.X) * 90
@@ -1562,6 +1567,7 @@
 		else
 			self.rail_sparks.Enabled = false
 		end
+		print("rail sparks done")
 		
 		debug.profileend()
 	end
