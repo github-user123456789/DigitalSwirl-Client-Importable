@@ -100,6 +100,10 @@
 	function hud_class:UpdateDisplay(dt, player)
 		debug.profilebegin("hud_class:UpdateDisplay")
 		
+		local function print(...)
+			return ...
+		end
+		
 		--Update ring flashes
 		print("ring flashes")
 		for i, v in pairs(self.ring_flashes) do
