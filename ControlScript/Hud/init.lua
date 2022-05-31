@@ -101,6 +101,7 @@
 		debug.profilebegin("hud_class:UpdateDisplay")
 		
 		--Update ring flashes
+		print("ring flashes")
 		for i, v in pairs(self.ring_flashes) do
 			if v:Update(dt) then
 				--Destroy ring flashes
@@ -110,6 +111,7 @@
 		end
 		
 		--Update item cards
+		print("item cards")
 		local reset = true
 		for i, v in pairs(self.item_cards) do
 			if v:Update(dt, self.item_card_shift) then
@@ -128,6 +130,7 @@
 			end
 		end
 		
+		print("if reset then")
 		if reset then
 			self.item_card_x = 0
 			self.item_card_shift = 0
@@ -137,6 +140,7 @@
 		
 		--Update Hud display
 		--Hud
+		print("player score")
 		if player.score ~= self.score then
 			--Update score display
 			self.score_text:SetText(ZeroPad(tostring(player.score), 9))
@@ -144,6 +148,7 @@
 		end
 		
 		--Time
+		print("player time")
 		if player.time ~= self.time then
 			--Get text to display
 			local millis = ZeroPad(tostring(math.floor((player.time % 1) * 100)), 2)
@@ -156,6 +161,7 @@
 		end
 		
 		--Rings
+		print("player rings")
 		if player.rings ~= self.rings then
 			--If rings increased, create a ring flash
 			if self.rings ~= nil and player.rings > self.rings then
@@ -168,6 +174,7 @@
 		end
 		
 		--Item cards
+		print("sheet coords")
 		local sheet_coord = {
 			["5Rings"] =        Vector2.new(0, 0),
 			["10Rings"] =       Vector2.new(1, 0),
@@ -179,6 +186,7 @@
 			["MagnetShield"] =  Vector2.new(4, 0),
 		}
 		
+		print("item cards > 0")
 		if #player.item_cards > 0 then
 			--If the player wants to display new item cards, create them
 			for _,v in pairs(player.item_cards) do
@@ -200,6 +208,7 @@
 		end
 		
 		--Blink ring counter
+		print("ring blink")
 		if self.rings == 0 then
 			self.ring_blinkt = self.ring_blinkt + dt
 			self.ring_blink = 1 - (math.cos(self.ring_blinkt * 3) / 2 + 0.5)
@@ -210,6 +219,7 @@
 		self.ring_text:SetColour(Color3.new(1, 1, 1):Lerp(Color3.new(1, 0, 0), self.ring_blink))
 		
 		--Update portrait
+		print("portrait")
 		if player.portrait ~= self.portrait then
 			--Update portrait display
 			local portrait = player.portraits[player.portrait]
@@ -225,6 +235,7 @@
 		end
 		
 		--Shake HUD
+		print("shake hud")
 		if self.hurt_shake > 0 then
 			self.hurt_shake = self.hurt_shake - dt
 			if self.hurt_shake < 0 then
