@@ -11,7 +11,7 @@
 	local player = players.LocalPlayer
 	local replicated_storage = game:GetService("ReplicatedStorage")
 	--local player_replicate_event = replicated_storage:WaitForChild("PlayerReplicate")
-	local player_replicate_event = Instance.new("RemoteEvent", script)
+	local player_replicate_event = script.Parent.playerreplicate
 	local common_modules = commons
 	local playerreplicate_modules = common_modules.PlayerReplicate
 
