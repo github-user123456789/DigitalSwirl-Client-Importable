@@ -260,7 +260,7 @@
 	end
 
 	function player_animation.Animate(self)
-		
+		--[==[
 		if not self.animation["fakeanimationtag"] then
 			local animfake = {}
 			for i,v in pairs (GLOBALASSETS:children()) do
@@ -477,6 +477,7 @@
 		end; print("handled run anim")
 		
 		--Clear animation reset flag now that it's been processed
+		]==]
 		self.reset_anim = false
 	end
 
