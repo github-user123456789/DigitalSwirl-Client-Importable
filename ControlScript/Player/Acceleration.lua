@@ -23,12 +23,15 @@
 		local max_x_spd = self:GetMaxXSpeed()
 		local run_accel = self:GetRunAccel() * (self.v3 and 1.5 or 1)
 		local frict_mult = self.flag.grounded and self.frict_mult or 1
+		print("got physics values")
 		
 		--Get gravity force
 		local acc = self:ToLocal(self.gravity * weight)
+		print("got gravity force")
 		
 		--Get cross product between our moving velocity and floor normal
 		local tnorm_cross_velocity = self.floor_normal:Cross(self:ToGlobal(self.spd))
+		print("got cross product (move vel and floor normal)")
 		
 		--Amplify gravity
 		if self.dotp < 0.875 then
@@ -59,9 +62,11 @@
 		else
 			acc = Vector3.new(0, -weight, 0)
 		end
+		print("amplified gravity")
 		
 		--Get analogue state
 		local has_control, analogue_turn, analogue_mag = input.GetAnalogue(self)
+		print("got analogue state")
 		
 		--Air drag
 		if self.v3 ~= true then
@@ -93,6 +98,7 @@
 		else
 			self.spd = vector.AddZ(self.spd, self.spd.Z * self.p.air_resist_z)
 		end
+		print("did air drag")
 		
 		--Movement
 		if has_control then
@@ -163,6 +169,7 @@
 			--Decelerate
 			move_accel = movement.GetDecel(self.spd.X + acc.X, self.p.slow_down * (self.v3 and 4 or 1))
 		end
+		print("movement")
 		
 		--Apply movement acceleration
 		if self.v3 then
@@ -171,9 +178,11 @@
 			end
 		end
 		acc = vector.AddX(acc, move_accel * frict_mult)
+		print("acc")
 		
 		--Apply acceleration
 		self.spd = self.spd + acc
+		print("add")
 	end
 
 	function player_acceleration.GetAirAcceleration(self)
