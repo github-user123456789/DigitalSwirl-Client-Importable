@@ -276,7 +276,6 @@
 						print("set animation")
 					end
 				end; print("handled animation end changes")
-				]]
 				
 				--Handle animation specific changes
 				switch(self.animation, {}, {
@@ -300,7 +299,8 @@
 							self.animation = "Fall"
 						end
 					end,
-				}); print("handled anim specific changes")
+				});]]
+				print("handled anim specific changes")
 			end
 			
 			--Animation changes
