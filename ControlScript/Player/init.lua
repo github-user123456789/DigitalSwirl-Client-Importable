@@ -1509,17 +1509,19 @@
 		local ball_form, ball_spin
 		if self.animation == "Roll" then
 			ball_form = "JumpBall"
-			ball_spin = animation.GetAnimationRate(self) * math.pi * 2
+			--ball_spin = animation.GetAnimationRate(self) * math.pi * 2
+			ball_spin = tick() * math.pi * 2
 		elseif self.animation == "Spindash" then
 			ball_form = "SpindashBall"
-			ball_spin = animation.GetAnimationRate(self) * math.pi * 2
+			--ball_spin = animation.GetAnimationRate(self) * math.pi * 2
+			ball_spin = tick() * math.pi * 2
 		else
 			ball_form = nil
 			ball_spin = 0
 		end
 		print("set draw state")
 		
-		--self.player_draw:Draw(dt, hrp_cframe, ball_form, ball_spin, self:TrailActive(), self.shield, self.invincibility_time > 0, self:IsBlinking())
+		self.player_draw:Draw(dt, hrp_cframe, ball_form, ball_spin, self:TrailActive(), self.shield, self.invincibility_time > 0, self:IsBlinking())
 		
 		print("player was drawn")
 		--Update sound source
