@@ -1483,7 +1483,7 @@
 		debug.profilebegin("player:Draw")
 		
 		local function print(...)
-			return ...
+			return warn(...)
 		end
 		
 		--Update animation and dynamic tilt
