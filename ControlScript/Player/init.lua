@@ -88,7 +88,7 @@
 		--Disable humanoid
 		local enable = {
 			[Enum.HumanoidStateType.None] = true,
-			[Enum.HumanoidStateType.Dead] = true,
+			[Enum.HumanoidStateType.Dead] = false,
 			[Enum.HumanoidStateType.Physics] = true,
 		}
 		for _,v in pairs(Enum.HumanoidStateType:GetEnumItems()) do
