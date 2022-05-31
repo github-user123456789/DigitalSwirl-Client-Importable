@@ -1482,9 +1482,9 @@
 	function player:Draw(dt)
 		debug.profilebegin("player:Draw")
 		
-		local function print(...)
-			return ...
-		end
+		--local function print(...)
+			--return ...
+		--end
 		
 		--Update animation and dynamic tilt
 		print("doing anims")
@@ -1502,6 +1502,7 @@
 		print("char pos done")
 		
 		local hrp_cframe = (self.vis_ang + self.pos + off) + (self.vis_ang.UpVector * self:GetCharacterYOff())
+		self.supersecrethrp = hrp_cframe
 		
 		--Set Player Draw state
 		print("setting draw state")
