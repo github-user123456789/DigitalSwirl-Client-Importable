@@ -1482,9 +1482,9 @@
 	function player:Draw(dt)
 		debug.profilebegin("player:Draw")
 		
-		local function print(...)
-			return ...	
-		end
+		--local function print(...)
+			--return print(...)
+		--end
 		
 		--Update animation and dynamic tilt
 		print("doing anims")
