@@ -1521,7 +1521,7 @@
 		end
 		print("set draw state")
 		
-		self.player_draw:Draw(dt, hrp_cframe, ball_form, ball_spin, self:TrailActive(), self.shield, self.invincibility_time > 0, self:IsBlinking())
+		--self.player_draw:Draw(dt, hrp_cframe, ball_form, ball_spin, self:TrailActive(), self.shield, self.invincibility_time > 0, self:IsBlinking())
 		
 		print("player was drawn")
 		--Update sound source
