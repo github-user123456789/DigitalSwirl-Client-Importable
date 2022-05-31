@@ -9,7 +9,6 @@ print("loading vector")
 
 	--]]
 
---[[
 	local vector = {}
 
 	function vector.Flatten(vector, normal)
@@ -97,4 +96,3 @@ print("loading vector")
 
 	return vector
 
-]]
