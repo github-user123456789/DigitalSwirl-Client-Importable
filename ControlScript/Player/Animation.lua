@@ -260,7 +260,7 @@
 	end
 
 	function player_animation.Animate(self)
-		return nil end
+		--[[
 		if self.animation ~= nil then
 			if self.animation == self.prev_animation then
 				--Handle animation end changes
@@ -453,7 +453,7 @@
 				self.animation_tracks[self.animation]:AdjustSpeed(0.125 + math.abs(self.anim_speed) / 2)
 			end
 		end
-		
+		]]
 		--Clear animation reset flag now that it's been processed
 		self.reset_anim = false
 	end
