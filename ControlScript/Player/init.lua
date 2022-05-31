@@ -1483,17 +1483,22 @@
 		debug.profilebegin("player:Draw")
 		
 		--Update animation and dynamic tilt
+		print("doing anims")
 		animation.Animate(self)
 		animation.DynTilt(self, dt)
+		print("finished anims")
 		
 		--Get character position
+		print("getting char pos")
 		local balance = self.state == constants.state.rail and self.rail_balance or 0
 		local off = self.state == constants.state.rail and self.rail_off or Vector3.new()
 		self.vis_ang = (self:AngleToRbx(self.ang) * CFrame.Angles(0, 0, -balance)):Lerp(self.vis_ang, (0.675 ^ 60) ^ dt)
+		print("char pos done")
 		
 		local hrp_cframe = (self.vis_ang + self.pos + off) + (self.vis_ang.UpVector * self:GetCharacterYOff())
 		
 		--Set Player Draw state
+		print("setting draw state")
 		local ball_form, ball_spin
 		if self.animation == "Roll" then
 			ball_form = "JumpBall"
@@ -1505,11 +1510,14 @@
 			ball_form = nil
 			ball_spin = 0
 		end
+		print("set draw state")
 		
 		self.player_draw:Draw(dt, hrp_cframe, ball_form, ball_spin, self:TrailActive(), self.shield, self.invincibility_time > 0, self:IsBlinking())
 		
+		print("player was drawn")
 		--Update sound source
 		sound.UpdateSource(self)
+		print("updated sounds")
 		
 		--Speed trail
 		--if math.abs(self.spd.X) >= (self.p.rush_speed + self.p.crash_speed) / 2 then
@@ -1520,11 +1528,13 @@
 		--end
 		
 		--Rail speed trail
+		print("attempting to do rail grind")
 		if rail.GrindActive(self) and math.abs(self.spd.X) >= self.p.crash_speed then
 			self.rail_speed_trail.Enabled = true
 		else
 			self.rail_speed_trail.Enabled = false
 		end
+		print("did rail grind")
 		
 		--Air kick trails
 		if self.animation == "AirKick" then
