@@ -151,6 +151,7 @@
 				--["REye"] = self.right_eye,
 			}
 			
+			--[[
 			for i, v in pairs(facial_parts) do
 				for j, k in pairs(facial_assets[i]) do
 					anim:GetMarkerReachedSignal(i.."-"..j):Connect(function()
@@ -158,6 +159,7 @@
 					end)
 				end
 			end
+			]]
 		end
 	end
 
@@ -296,9 +298,9 @@
 			--Animation changes
 			if self.animation ~= self.prev_animation or self.reset_anim then
 				--Reset facial state
-				self.mouth.TextureID = facial_assets["Mouth"]["DefaultSmile"]
-				self.left_eye.TextureID = facial_assets["LEye"]["DefaultEyes"]
-				self.right_eye.TextureID = facial_assets["REye"]["DefaultEyes"]
+				--self.mouth.TextureID = facial_assets["Mouth"]["DefaultSmile"]
+				--self.left_eye.TextureID = facial_assets["LEye"]["DefaultEyes"]
+				--self.right_eye.TextureID = facial_assets["REye"]["DefaultEyes"]
 				
 				--Stop previous animation
 				if self.prev_animation ~= nil then
@@ -352,13 +354,12 @@
 			end
 		end
 		
-		--[[
 		--Reset animation state
 		if self.animation ~= self.prev_animation or self.reset_anim then
 			--Reset facial state
-			self.mouth.TextureID = facial_assets["Mouth"]["DefaultSmile"]
-			self.left_eye.TextureID = facial_assets["LEye"]["DefaultEyes"]
-			self.right_eye.TextureID = facial_assets["REye"]["DefaultEyes"]
+			--self.mouth.TextureID = facial_assets["Mouth"]["DefaultSmile"]
+			--self.left_eye.TextureID = facial_assets["LEye"]["DefaultEyes"]
+			--self.right_eye.TextureID = facial_assets["REye"]["DefaultEyes"]
 		end
 		
 		--Animation changes
@@ -451,7 +452,6 @@
 				self.animation_tracks[self.animation]:AdjustSpeed(0.125 + math.abs(self.anim_speed) / 2)
 			end
 		end
-		--]]
 		
 		--Clear animation reset flag now that it's been processed
 		self.reset_anim = false
